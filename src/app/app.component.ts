@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { LevelService } from './level.service';
 import { USER } from './user..token';
 
@@ -10,6 +11,9 @@ import { USER } from './user..token';
     {provide:LevelService,useValue:{providedVia:'App Component'}},
     {
       provide:USER,useValue:"Sanju"
+    },
+    {
+      provide:'env',useValue:environment
     }
   ]
 })

@@ -1,4 +1,5 @@
 import { Component, Host, Inject, OnInit } from '@angular/core';
+import { Environment } from '../environment.token';
 import { LevelService } from '../level.service';
 import { USER } from '../user..token';
 
@@ -12,7 +13,8 @@ export class BottomComponent implements OnInit {
 
   constructor(
     @Host() public levelService:LevelService,
-    @Inject(USER) public user:string
+    @Inject(USER) public user:string,
+    @Inject(Environment) public env:Environment
   ) { }
 
   ngOnInit(): void {
