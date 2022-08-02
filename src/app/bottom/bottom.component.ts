@@ -1,5 +1,6 @@
-import { Component, Host, OnInit } from '@angular/core';
+import { Component, Host, Inject, OnInit } from '@angular/core';
 import { LevelService } from '../level.service';
+import { USER } from '../user..token';
 
 @Component({
   selector: 'app-bottom',
@@ -9,7 +10,10 @@ import { LevelService } from '../level.service';
 })
 export class BottomComponent implements OnInit {
 
-  constructor(@Host() public levelService:LevelService) { }
+  constructor(
+    @Host() public levelService:LevelService,
+    @Inject(USER) public user:string
+  ) { }
 
   ngOnInit(): void {
   }
