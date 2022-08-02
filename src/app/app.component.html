@@ -1,0 +1,16 @@
+<h2>
+  We implemented @Host() Resolution Modifier Decorator, which looks till the host element
+  If we commnent the provider from top component it will throw error, as Top is the last Host
+  element for bottom component.
+
+  By default current component is host component, but when we project that component inside
+  parent component , parent component becomes host component
+</h2>
+
+<app-top>
+  <app-mid>
+    <app-bottom>
+
+    </app-bottom>
+  </app-mid>
+</app-top>
