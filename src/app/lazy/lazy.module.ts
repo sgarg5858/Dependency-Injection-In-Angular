@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    SharedModule,
+    SharedModule.forChild(),
     RouterModule.forChild([
       {path:'',component:LazyComponent}
     ])
