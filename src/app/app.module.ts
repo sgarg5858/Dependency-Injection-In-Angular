@@ -21,7 +21,8 @@ import { environment } from 'src/environments/environment';
     AppRoutingModule
   ],
   providers: [
-    {provide:Environment,useValue:environment}
+    {provide:Environment,useValue:environment},
+    
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { LevelService } from './level.service';
+import { LoggerService } from './logger.service';
 import { USER } from './user..token';
 
 @Component({
@@ -19,4 +20,7 @@ import { USER } from './user..token';
 })
 export class AppComponent {
   title = 'dependency-injection-in-angular';
+  constructor(private loggerService:LoggerService){
+    console.log(this.loggerService.logError("BAM"))
+  }
 }
